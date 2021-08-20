@@ -1,0 +1,33 @@
+/*******-*****/
+/**** MENU ***/
+/*************/
+.menuSegment {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1.5px solid var(--brigth);
+  border-left: 2.5px solid var(--brigth);
+  border-right: 2.5px solid var(--brigth);
+  background-color: var(--dark);
+  padding: 0rem 0.8rem;
+  transition: all 0.5s 0s;
+}
+
+.menuSegment img {
+  width: 1.3rem;
+}
+
+.menuOption {
+  color: white;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+.menuSegment:hover {
+  background-color: var(--brigth);
+}
+.menuOptionSelected {
+  background-color: var(--brigth);
+  border-top: 2px solid var(--remark);
+  transition: all 0.5s 0s;
+}
