@@ -2,17 +2,17 @@ import GeneralHeader from "./GeneralHeader";
 import { useState } from "react";
 import reactLogo from "../assets/react.png";
 import htmlLogo from "../assets/html5.png";
-import mdLogo from "../assets/md.png";
+// import mdLogo from "../assets/md.png";
 import cssLogo from "../assets/css3.png";
 import jsLogo from "../assets/js.png";
-import "../css/menuHeader.css";
+import "../css/verticalHeader.css";
 
-export default function MenuHeader() {
+export default function VerticalHeader({ menuParams, settersArr }) {
   const menuParameters = {
-    sectionClass: "menu",
-    linkclass: "menuOption",
-    divClass: "menuSegment",
-    selectedDivClass: "menuOptionSelected",
+    sectionClass: " verticalMenu",
+    linkclass: "verticalOption",
+    divClass: "verticalSegment",
+    selectedDivClass: "verticalOptionSelected",
     notSelectedDivClass: " ",
   };
 
@@ -45,21 +45,49 @@ export default function MenuHeader() {
       name: "Home.jsx",
       icon: reactLogo,
       route: "/",
+      activeActions: true,
+      selected: function () {
+        settersArr[0](menuParams.selectedDivClass);
+      },
+      notSelected: function () {
+        settersArr[0](menuParams.notSelectedDivClass);
+      },
     },
     {
       name: "About.hmtl",
       icon: htmlLogo,
       route: "/about",
+      activeActions: true,
+      selected: function () {
+        settersArr[1](menuParams.selectedDivClass);
+      },
+      notSelected: function () {
+        settersArr[1](menuParams.notSelectedDivClass);
+      },
     },
     {
       name: "Projects.js",
       icon: jsLogo,
       route: "/projects",
+      activeActions: true,
+      selected: function () {
+        settersArr[2](menuParams.selectedDivClass);
+      },
+      notSelected: function () {
+        settersArr[2](menuParams.notSelectedDivClass);
+      },
     },
     {
       name: "Contact.css",
       icon: cssLogo,
       route: "/contact",
+      activeActions: true,
+      selected: function () {
+        settersArr[3](menuParams.selectedDivClass);
+      },
+      notSelected: function () {
+        settersArr[3](menuParams.notSelectedDivClass);
+      },
     },
   ];
 

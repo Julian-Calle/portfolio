@@ -22,9 +22,13 @@ export default function GeneralHeader({
       if (index === indexOptionSelected) {
         changeState = () => setter(itemParameters.selectedDivClass);
         changeState();
+        itemOptions[indexOptionSelected].selected();
       } else {
         changeState = () => setter(itemParameters.notSelectedDivClass);
         changeState();
+        if (itemOptions[index].activeActions) {
+          itemOptions[index].notSelected();
+        }
       }
     });
   };

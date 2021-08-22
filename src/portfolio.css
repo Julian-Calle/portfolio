@@ -45,13 +45,7 @@ html {
 }
 
 .menu {
-  display: flex;
-  /* gap: 1rem; */
   grid-area: menu;
-  background-color: var(--dark);
-  font-size: 1.5rem;
-  border-top: 2px solid var(--darker);
-  border-left: 2px solid var(--darker);
 }
 
 .icons {
@@ -59,7 +53,7 @@ html {
   flex-direction: column;
   grid-area: icons;
 }
-.verticalMenu {
+.menuSideBar {
   display: none;
 }
 
@@ -73,15 +67,54 @@ html {
   grid-area: footer;
 }
 
-@media (min-width: 600px) {
-  .verticalMenu {
+.sideBarContainer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0.5rem 1rem;
+}
+.arrow {
+  width: 1.5rem;
+}
+.down {
+  transform: rotate(90deg);
+  transition: transform 0.5s 0s;
+}
+.right {
+  transform: rotate(0deg);
+  transition: transform 0.5s 0s;
+}
+
+.show {
+  width: 100%;
+  transform: scale(1, 1);
+  transform-origin: 50% top;
+  transition: all 0.2s 0s;
+}
+
+.hide {
+  transform: scale(1, 0);
+  transform-origin: 50% top;
+  transition: all 0.2s 0s;
+}
+@media (min-width: 800px) {
+  .menuSideBar {
     display: flex;
     flex-direction: column;
     grid-area: verticalMenu;
+    background-color: var(--dark);
+    border-top: 2px solid var(--darker);
+    align-items: flex-start;
+    /* padding: 1rem 2rem; */
+    width: 100%;
+  }
+
+  .menuSideBar > P {
+    padding: 1rem 1rem;
   }
   .App {
-    grid-template-columns: 1fr 1fr 5fr;
-    grid-template-rows: 2rem 2.5rem 1fr 2rem;
+    grid-template-columns: 6rem 1fr 5fr;
+    grid-template-rows: 2rem 4rem 1fr 2rem;
     grid-template-areas:
       "fakeHeader fakeHeader fakeHeader   "
       "icons verticalMenu menu    "

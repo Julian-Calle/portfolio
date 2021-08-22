@@ -1,6 +1,14 @@
 /*******-*****/
 /**** MENU ***/
 /*************/
+
+.mainMenu {
+  display: flex;
+  background-color: var(--dark);
+  font-size: 2rem;
+  border-top: 2px solid var(--darker);
+  border-left: 2px solid var(--darker);
+}
 .menuSegment {
   display: flex;
   justify-content: center;
@@ -11,10 +19,11 @@
   background-color: var(--dark);
   padding: 0rem 0.8rem;
   transition: all 0.5s 0s;
+  gap: 0.5rem;
 }
 
 .menuSegment img {
-  width: 1.3rem;
+  width: 1.7rem;
 }
 
 .menuOption {

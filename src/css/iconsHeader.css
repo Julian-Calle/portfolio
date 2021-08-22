@@ -1,0 +1,77 @@
+/******************/
+/**** vertical ***/
+/****************/
+
+.iconsMenu {
+  display: grid;
+  /* flex-direction: column; */
+  background-color: var(--dark);
+  font-size: 1.5rem;
+  width: 100%;
+  gap: 2rem;
+  height: 100%;
+  border: 2px solid var(--darker);
+  padding: 1rem 0;
+  grid-template-rows: 3rem 3rem 3rem 1fr 3rem 3rem;
+  grid-template-areas:
+    "home"
+    "projects"
+    "contact"
+    "."
+    "about"
+    "settings";
+}
+.iconsSegment {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--dark);
+}
+
+.iconsSegment img {
+  width: 3.5rem;
+}
+
+.iconsSegment img:hover {
+  width: 4rem;
+}
+
+.iconsOption {
+  color: white;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+.iconsSegment:hover {
+  background-color: var(--brigth);
+}
+.iconsOptionSelected {
+  transition: all 0.5s 0s;
+}
+
+.iconsOptionSelected img {
+  width: 4rem;
+  transition: width 0.5s 0s;
+  /* border-left: 3px white solid;
+  padding-left: 0.3rem; */
+}
+
+.iconsMenu :nth-child(1) {
+  grid-area: home;
+}
+
+.iconsMenu :nth-child(2) {
+  grid-area: about;
+}
+
+.iconsMenu :nth-child(3) {
+  grid-area: projects;
+}
+
+.iconsMenu :nth-child(4) {
+  grid-area: contact;
+}
+
+.iconsMenu :nth-child(5) {
+  grid-area: settings;
+}
