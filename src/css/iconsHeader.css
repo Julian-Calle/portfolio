@@ -10,16 +10,17 @@
   width: 100%;
   gap: 2rem;
   height: 100%;
-  border: 2px solid var(--darker);
+  border-top: 2px solid var(--darker);
+  margin-bottom: 0.5rem;
+
   padding: 1rem 0;
-  grid-template-rows: 3rem 3rem 3rem 1fr 3rem 3rem;
+  grid-template-rows: 3rem 3rem 3rem 1fr 3rem;
   grid-template-areas:
     "home"
     "projects"
     "contact"
     "."
-    "about"
-    "settings";
+    "about";
 }
 .iconsSegment {
   display: flex;
@@ -28,12 +29,15 @@
   background-color: var(--dark);
 }
 
-.iconsSegment img {
-  width: 3.5rem;
-}
-
 .iconsSegment img:hover {
   width: 4rem;
+  transition: all 0.5s 0s;
+  border-left: 3px white solid;
+  padding-left: 0.3rem;
+}
+
+.iconsSegment img {
+  width: 3.5rem;
 }
 
 .iconsOption {
@@ -51,9 +55,10 @@
 
 .iconsOptionSelected img {
   width: 4rem;
-  transition: width 0.5s 0s;
-  /* border-left: 3px white solid;
-  padding-left: 0.3rem; */
+  border-left: 3px white solid;
+  border-radius: 28%;
+  padding-left: 0.3rem;
+  transition: all 0.5s 0s;
 }
 
 .iconsMenu :nth-child(1) {
