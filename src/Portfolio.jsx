@@ -12,102 +12,16 @@ import MenuHeader from "./components/MenuHeader";
 import VerticalHeader from "./components/VerticalHeader";
 import IconsHeader from "./components/IconsHeader";
 import { useState } from "react";
-
+import useGeneralContext from "./hooks/useGeneralContext";
+import { GeneralProvider } from "./context/GeneralContext";
 function Portfolio() {
-  const menuParameters = {
-    sectionClass: "menu mainMenu",
-    linkclass: "menuOption",
-    divClass: "menuSegment",
-    selectedDivClass: "menuOptionSelected",
-    notSelectedDivClass: " ",
-  };
-
-  const [firstMenuTitleColor, setFirstMenuTitleColor] = useState(
-    menuParameters.notSelectedDivClass
-  );
-  const [secondMenuTitleColor, setSecondMenuTitleColor] = useState(
-    menuParameters.notSelectedDivClass
-  );
-  const [thirdMenuTitleColor, setThirdMenuTitleColor] = useState(
-    menuParameters.notSelectedDivClass
-  );
-  const [fourthMenuTitleColor, setFourthMenuTitleColor] = useState(
-    menuParameters.notSelectedDivClass
-  );
-  const stateMenuArray = [
-    firstMenuTitleColor,
-    secondMenuTitleColor,
-    thirdMenuTitleColor,
-    fourthMenuTitleColor,
-  ];
-  const settersMenuArray = [
-    setFirstMenuTitleColor,
-    setSecondMenuTitleColor,
-    setThirdMenuTitleColor,
-    setFourthMenuTitleColor,
-  ];
-
-  const iconsParameters = {
-    sectionClass: " iconsMenu",
-    linkclass: "iconsOption",
-    divClass: "iconsSegment",
-    selectedDivClass: "iconsOptionSelected",
-    notSelectedDivClass: " ",
-  };
-
-  const [firstIconsTitleColor, setFirstIconsTitleColor] = useState(
-    iconsParameters.notSelectedDivClass
-  );
-  const [secondIconsTitleColor, setSecondIconsTitleColor] = useState(
-    iconsParameters.notSelectedDivClass
-  );
-  const [thirdIconsTitleColor, setThirdIconsTitleColor] = useState(
-    iconsParameters.notSelectedDivClass
-  );
-  const [fourthIconsTitleColor, setFourthIconsTitleColor] = useState(
-    iconsParameters.notSelectedDivClass
-  );
-
-  // const [fivethIconsTitleColor, setFivethIconsTitleColor] = useState(
-  //   iconsParameters.notSelectedDivClass
-  // );
-
-  const stateIconsArray = [
-    firstIconsTitleColor,
-    secondIconsTitleColor,
-    thirdIconsTitleColor,
-    fourthIconsTitleColor,
-    // fivethIconsTitleColor,
-  ];
-  const settersIconsArray = [
-    setFirstIconsTitleColor,
-    setSecondIconsTitleColor,
-    setThirdIconsTitleColor,
-    setFourthIconsTitleColor,
-    // setFivethIconsTitleColor,
-  ];
-
-  const [sideBarCls, setSideBarCls] = useState("show");
-  const [arrowDirection, setArrowDirection] = useState("down");
-
-  const [settingsIconCls, setSettingsIconCls] = useState("settingNotSelected");
-  const rollBarrel = () => {
-    if (sideBarCls === "show") {
-      setSideBarCls("hide");
-      setArrowDirection("right");
-    } else {
-      setSideBarCls("show");
-      setArrowDirection("down");
-    }
-  };
-
-  const ChangeSettingsCls = () => {
-    if (settingsIconCls === "settingSelected") {
-      setSettingsIconCls("settingNotSelected");
-    } else {
-      setSettingsIconCls("settingSelected");
-    }
-  };
+  const {
+    rollBarrel,
+    ChangeSettingsCls,
+    arrowDirection,
+    sideBarCls,
+    settingsIconCls,
+  } = useGeneralContext();
 
   return (
     <div className="App">
@@ -121,15 +35,9 @@ function Portfolio() {
         <p>Help</p>
       </header>
 
-      <MenuHeader
-        menuParameters={menuParameters}
-        stateMenuArray={stateMenuArray}
-        settersMenuArray={settersMenuArray}
-        menuParams={iconsParameters}
-        settersArr={settersIconsArray}
-      />
+      <MenuHeader />
 
-      <main className="main">
+      <section className="main">
         <Switch>
           <Route exact path="/">
             <Home />
@@ -145,24 +53,18 @@ function Portfolio() {
           </Route>
           <Route exact path="/test"></Route>
         </Switch>
-      </main>
-      <aside className="icons">
+      </section>
+      <section className="icons">
         {/* hacer un componente */}
-        <IconsHeader
-          menuParams={menuParameters}
-          settersArr={settersMenuArray}
-          stateIconsArray={stateIconsArray}
-          settersIconsArray={settersIconsArray}
-          iconsParameters={iconsParameters}
-        />
+        <IconsHeader />
         <img
           onClick={ChangeSettingsCls}
           className={settingsIconCls}
           src={codeIcon}
           alt="settins Icon"
         />
-      </aside>
-      <aside className="menuSideBar">
+      </section>
+      <section className="menuSideBar">
         {/* hacer un componente */}
         <p>EXPLORER</p>
         <div onClick={rollBarrel} className=" sideBarContainer">
@@ -174,12 +76,9 @@ function Portfolio() {
           PORTFOLIO
         </div>
         <div className={sideBarCls}>
-          <VerticalHeader
-            menuParams={menuParameters}
-            settersArr={settersMenuArray}
-          />
+          <VerticalHeader />
         </div>
-      </aside>
+      </section>
       <footer className="footer">footer</footer>
     </div>
   );

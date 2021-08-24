@@ -6,9 +6,12 @@ import htmlLogo from "../assets/html5.png";
 import cssLogo from "../assets/css3.png";
 import jsLogo from "../assets/js.png";
 import "../css/verticalHeader.css";
+import useGeneralContext from "../hooks/useGeneralContext";
 
-export default function VerticalHeader({ menuParams, settersArr }) {
-  const menuParameters = {
+export default function VerticalHeader() {
+  const { otherVerticalParams, otherVerticalSettersArr } = useGeneralContext();
+
+  const verticalParameters = {
     sectionClass: " verticalMenu",
     linkclass: "verticalOption",
     divClass: "verticalSegment",
@@ -16,29 +19,29 @@ export default function VerticalHeader({ menuParams, settersArr }) {
     notSelectedDivClass: " ",
   };
 
-  const [firstTitleColor, setFirstTitleColor] = useState(
-    menuParameters.notSelectedDivClass
+  const [firstVerticalTitleColor, setFirstVerticalTitleColor] = useState(
+    verticalParameters.notSelectedDivClass
   );
-  const [secondTitleColor, setSecondTitleColor] = useState(
-    menuParameters.notSelectedDivClass
+  const [secondVerticalTitleColor, setSecondVerticalTitleColor] = useState(
+    verticalParameters.notSelectedDivClass
   );
-  const [thirdTitleColor, setThirdTitleColor] = useState(
-    menuParameters.notSelectedDivClass
+  const [thirdVerticalTitleColor, setThirdVerticalTitleColor] = useState(
+    verticalParameters.notSelectedDivClass
   );
-  const [fourthTitleColor, setFourthTitleColor] = useState(
-    menuParameters.notSelectedDivClass
+  const [fourthVerticalTitleColor, setFourthVerticalTitleColor] = useState(
+    verticalParameters.notSelectedDivClass
   );
   const stateArray = [
-    firstTitleColor,
-    secondTitleColor,
-    thirdTitleColor,
-    fourthTitleColor,
+    firstVerticalTitleColor,
+    secondVerticalTitleColor,
+    thirdVerticalTitleColor,
+    fourthVerticalTitleColor,
   ];
   const settersArray = [
-    setFirstTitleColor,
-    setSecondTitleColor,
-    setThirdTitleColor,
-    setFourthTitleColor,
+    setFirstVerticalTitleColor,
+    setSecondVerticalTitleColor,
+    setThirdVerticalTitleColor,
+    setFourthVerticalTitleColor,
   ];
   const menuOptionsWithOutState = [
     {
@@ -47,10 +50,14 @@ export default function VerticalHeader({ menuParams, settersArr }) {
       route: "/",
       activeActions: true,
       selected: function () {
-        settersArr[0](menuParams.selectedDivClass);
+        otherVerticalSettersArr.forEach((setter, index) => {
+          setter[0](otherVerticalParams[index].selectedDivClass);
+        });
       },
       notSelected: function () {
-        settersArr[0](menuParams.notSelectedDivClass);
+        otherVerticalSettersArr.forEach((setter, index) => {
+          setter[0](otherVerticalParams[index].notSelectedDivClass);
+        });
       },
     },
     {
@@ -59,10 +66,14 @@ export default function VerticalHeader({ menuParams, settersArr }) {
       route: "/about",
       activeActions: true,
       selected: function () {
-        settersArr[1](menuParams.selectedDivClass);
+        otherVerticalSettersArr.forEach((setter, index) => {
+          setter[1](otherVerticalParams[index].selectedDivClass);
+        });
       },
       notSelected: function () {
-        settersArr[1](menuParams.notSelectedDivClass);
+        otherVerticalSettersArr.forEach((setter, index) => {
+          setter[1](otherVerticalParams[index].notSelectedDivClass);
+        });
       },
     },
     {
@@ -71,10 +82,14 @@ export default function VerticalHeader({ menuParams, settersArr }) {
       route: "/projects",
       activeActions: true,
       selected: function () {
-        settersArr[2](menuParams.selectedDivClass);
+        otherVerticalSettersArr.forEach((setter, index) => {
+          setter[2](otherVerticalParams[index].selectedDivClass);
+        });
       },
       notSelected: function () {
-        settersArr[2](menuParams.notSelectedDivClass);
+        otherVerticalSettersArr.forEach((setter, index) => {
+          setter[2](otherVerticalParams[index].notSelectedDivClass);
+        });
       },
     },
     {
@@ -83,17 +98,21 @@ export default function VerticalHeader({ menuParams, settersArr }) {
       route: "/contact",
       activeActions: true,
       selected: function () {
-        settersArr[3](menuParams.selectedDivClass);
+        otherVerticalSettersArr.forEach((setter, index) => {
+          setter[3](otherVerticalParams[index].selectedDivClass);
+        });
       },
       notSelected: function () {
-        settersArr[3](menuParams.notSelectedDivClass);
+        otherVerticalSettersArr.forEach((setter, index) => {
+          setter[3](otherVerticalParams[index].notSelectedDivClass);
+        });
       },
     },
   ];
 
   return (
     <GeneralHeader
-      itemParameters={menuParameters}
+      itemParameters={verticalParameters}
       itemOptions={menuOptionsWithOutState}
       stateArray={stateArray}
       settersArray={settersArray}

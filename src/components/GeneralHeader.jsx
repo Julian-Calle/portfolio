@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useHistory } from "react-router-dom";
 
 export default function GeneralHeader({
   itemParameters,
@@ -8,6 +8,7 @@ export default function GeneralHeader({
   settersArray,
   includeText = true,
 }) {
+  const history = useHistory();
   const itemOptionsWithState = itemOptions.map((item, index) => {
     return { ...item, state: stateArray[index] };
   });
@@ -40,6 +41,7 @@ export default function GeneralHeader({
             key={item.name}
             onClick={() => {
               switchToBrigth(item.name, array);
+              history.push(item.route);
             }}
             className={`${itemParameters.divClass} ${item.state}`}
           >

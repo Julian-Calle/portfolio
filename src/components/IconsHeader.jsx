@@ -6,14 +6,16 @@ import "../css/iconsHeader.css";
 import { useHistory } from "react-router-dom";
 import fileIcon from "../assets/files.svg";
 import codeIcon from "../assets/code.svg";
+import useGeneralContext from "../hooks/useGeneralContext";
 
-export default function IconsHeader({
-  menuParams,
-  settersArr,
-  stateIconsArray,
-  settersIconsArray,
-  iconsParameters,
-}) {
+export default function IconsHeader() {
+  const {
+    iconsParameters,
+    stateIconsArray,
+    settersIconsArray,
+    otherIconsParams,
+    otherIconsSettersArr,
+  } = useGeneralContext();
   const history = useHistory();
 
   const menuOptionsWithOutState = [
@@ -23,11 +25,11 @@ export default function IconsHeader({
       route: "/",
       activeActions: true,
       selected: function () {
-        settersArr[0](menuParams.selectedDivClass);
+        otherIconsSettersArr[0](otherIconsParams.selectedDivClass);
         history.push(this.route);
       },
       notSelected: function () {
-        settersArr[0](menuParams.notSelectedDivClass);
+        otherIconsSettersArr[0](otherIconsParams.notSelectedDivClass);
       },
     },
     {
@@ -36,11 +38,11 @@ export default function IconsHeader({
       route: "/about",
       activeActions: true,
       selected: function () {
-        settersArr[1](menuParams.selectedDivClass);
+        otherIconsSettersArr[1](otherIconsParams.selectedDivClass);
         history.push(this.route);
       },
       notSelected: function () {
-        settersArr[1](menuParams.notSelectedDivClass);
+        otherIconsSettersArr[1](otherIconsParams.notSelectedDivClass);
       },
     },
     {
@@ -49,11 +51,11 @@ export default function IconsHeader({
       route: "/projects",
       activeActions: true,
       selected: function () {
-        settersArr[2](menuParams.selectedDivClass);
+        otherIconsSettersArr[2](otherIconsParams.selectedDivClass);
         history.push(this.route);
       },
       notSelected: function () {
-        settersArr[2](menuParams.notSelectedDivClass);
+        otherIconsSettersArr[2](otherIconsParams.notSelectedDivClass);
       },
     },
     {
@@ -62,27 +64,13 @@ export default function IconsHeader({
       route: "/contact",
       activeActions: true,
       selected: function () {
-        settersArr[3](menuParams.selectedDivClass);
+        otherIconsSettersArr[3](otherIconsParams.selectedDivClass);
         history.push(this.route);
       },
       notSelected: function () {
-        settersArr[3](menuParams.notSelectedDivClass);
+        otherIconsSettersArr[3](otherIconsParams.notSelectedDivClass);
       },
     },
-
-    // {
-    //   name: "Homde.jsx",
-    //   icon: settingsIcon,
-    //   route: "/",
-    //   activeActions: true,
-    //   selected: function () {
-    //     // settersArr[0](menuParams.selectedDivClass);
-    //     history.push(this.route);
-    //   },
-    //   notSelected: function () {
-    //     // settersArr[0](menuParams.notSelectedDivClass);
-    //   },
-    // },
   ];
 
   return (
