@@ -7,6 +7,7 @@ export default function GeneralHeader({
   stateArray,
   settersArray,
   includeText = true,
+  includeIcon = "inherit",
 }) {
   const history = useHistory();
   const itemOptionsWithState = itemOptions.map((item, index) => {
@@ -45,7 +46,11 @@ export default function GeneralHeader({
             }}
             className={`${itemParameters.divClass} ${item.state}`}
           >
-            <img src={item.icon} alt={item.name} />
+            <img
+              style={{ display: `${includeIcon}` }}
+              src={item.icon}
+              alt={item.name}
+            />
             <NavLink exact className={itemParameters.linkclass} to={item.route}>
               {includeText && item.name}
             </NavLink>

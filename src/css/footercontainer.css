@@ -1,0 +1,65 @@
+.footerIcons {
+  width: 1.5rem;
+}
+img.react {
+  width: 2rem;
+}
+.git,
+.notification {
+  display: none;
+}
+
+.poweredBy {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: 470px) {
+  img.react {
+    width: 1.5rem;
+  }
+  .git {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1rem;
+  }
+  .git p {
+    margin-right: 1rem;
+  }
+
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* gap: 2rem; */
+    font-size: 1rem;
+  }
+  .poweredBy {
+    margin-right: 1rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .notification {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1rem;
+  }
+  .notification p {
+    margin-right: 1rem;
+  }
+
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    font-size: 1rem;
+  }
+}

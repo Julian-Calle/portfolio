@@ -4,35 +4,18 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
-import codeIcon from "./assets/code.svg";
-
-import rigthArrow from "./assets/right-arrow.svg";
-
+import IconNav from "./components/IconNav";
 import MenuHeader from "./components/MenuHeader";
-import VerticalHeader from "./components/VerticalHeader";
-import IconsHeader from "./components/IconsHeader";
-import { useState } from "react";
-import useGeneralContext from "./hooks/useGeneralContext";
-import { GeneralProvider } from "./context/GeneralContext";
-function Portfolio() {
-  const {
-    rollBarrel,
-    ChangeSettingsCls,
-    arrowDirection,
-    sideBarCls,
-    settingsIconCls,
-  } = useGeneralContext();
 
+import SideBar from "./components/SideBar";
+import HeaderContainer from "./components/HeaderContainer";
+import FooterContainer from "./components/FooterContainer";
+
+function Portfolio() {
   return (
     <div className="App">
       <header className="fakeHeader">
-        <p>File</p>
-        <p>Edit</p>
-        <p>View</p>
-        <p>Go</p>
-        <p>Run</p>
-        <p>Terminal</p>
-        <p>Help</p>
+        <HeaderContainer />
       </header>
 
       <MenuHeader />
@@ -54,32 +37,18 @@ function Portfolio() {
           <Route exact path="/test"></Route>
         </Switch>
       </section>
+
       <section className="icons">
-        {/* hacer un componente */}
-        <IconsHeader />
-        <img
-          onClick={ChangeSettingsCls}
-          className={settingsIconCls}
-          src={codeIcon}
-          alt="settins Icon"
-        />
+        <IconNav />
       </section>
+
       <section className="menuSideBar">
-        {/* hacer un componente */}
-        <p>EXPLORER</p>
-        <div onClick={rollBarrel} className=" sideBarContainer">
-          <img
-            className={`arrow ${arrowDirection}`}
-            src={rigthArrow}
-            alt="arrow"
-          />
-          PORTFOLIO
-        </div>
-        <div className={sideBarCls}>
-          <VerticalHeader />
-        </div>
+        <SideBar />
       </section>
-      <footer className="footer">footer</footer>
+
+      <footer className="footer">
+        <FooterContainer />
+      </footer>
     </div>
   );
 }

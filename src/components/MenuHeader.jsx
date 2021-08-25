@@ -32,6 +32,8 @@ export default function MenuHeader() {
     settersMenuArray,
     otherMenuParams,
     otherMenuSettersArr,
+    showText,
+    showIcons,
   } = useGeneralContext();
   const history = useHistory();
 
@@ -120,6 +122,8 @@ export default function MenuHeader() {
       itemOptions={menuOptionsWithOutState}
       stateArray={stateMenuArray}
       settersArray={settersMenuArray}
+      includeText={showText}
+      includeIcon={showIcons}
     />
   );
 }

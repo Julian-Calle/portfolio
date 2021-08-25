@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import useMediaQuery from "@material-ui/core/useMediaQuery";
 
 export const generalContext = React.createContext();
 const GeneralContextProvider = generalContext.Provider;
@@ -49,6 +50,26 @@ export function GeneralProvider({ children }) {
     setFourthMenuTitleColor,
   ];
 
+  // this code is used to determinate the style of the main header
+  //accoding to the window size
+  let showText = true;
+  let showIcons = "inherit";
+
+  const bigSize = useMediaQuery("(min-width:1180px)");
+  const mediumSize = useMediaQuery("(min-width: 820px)");
+
+  if (bigSize) {
+    showText = true;
+    showIcons = "inherit";
+  } else if (mediumSize) {
+    showText = true;
+    showIcons = "none";
+  } else {
+    showText = false;
+    showIcons = "inherit";
+  }
+
+  // showText  hideIcons justIcons
   //*********************/
   //****Icons header****/
   //*******************/
@@ -144,6 +165,8 @@ export function GeneralProvider({ children }) {
         arrowDirection,
         sideBarCls,
         settingsIconCls,
+        showText,
+        showIcons,
       }}
       //   menuParameters={menuParameters}
       //   settersMenuArray={settersMenuArray}
