@@ -11,6 +11,7 @@ html {
   --dark: #1f2428;
   --brigth: #24292e;
   --darker: #161a1d;
+  --brigther: #2b2e32;
   --remark: #857ee2;
 }
 
@@ -124,6 +125,11 @@ html {
   transform: scale(1, 0);
   transform-origin: 50% top;
   transition: all 0.2s 0s;
+}
+
+.titleCursor {
+  color: white;
+  margin-left: 0.5rem;
 }
 
 @media (min-width: 500px) {

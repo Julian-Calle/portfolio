@@ -41,7 +41,7 @@ section.headerFakeTexts {
     gap: 1rem;
     grid-area: fakeTexts;
     padding-left: 1rem;
-    justify-self: center;
+    justify-self: start;
   }
   .fakeHeader {
     grid-template-columns: 1fr 2fr 1fr;

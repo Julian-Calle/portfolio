@@ -145,6 +145,21 @@ export function GeneralProvider({ children }) {
     }
   };
 
+  //This funcions is used for generate a cursor that has a blinker effect
+  const [cursorBlink, setCursorBlink] = useState("|");
+  const cursorBlinker = () => {
+    const changeCursor = () => {
+      const time = new Date().getSeconds();
+
+      if (time % 2) {
+        setCursorBlink("|");
+      } else {
+        setCursorBlink("");
+      }
+    };
+    setInterval(changeCursor, 1000);
+  };
+
   return (
     <GeneralContextProvider
       value={{
@@ -167,6 +182,8 @@ export function GeneralProvider({ children }) {
         settingsIconCls,
         showText,
         showIcons,
+        cursorBlinker,
+        cursorBlink,
       }}
       //   menuParameters={menuParameters}
       //   settersMenuArray={settersMenuArray}

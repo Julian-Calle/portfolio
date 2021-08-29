@@ -1,0 +1,43 @@
+.aboutContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  /* background: repeating-linear-gradient(
+      0deg,
+      #fff 0%,
+      #fff 50%,
+      #000 50%,
+      #000 100%
+    ),
+    repeating-linear-gradient(90deg, #fff 0%, #fff 50%, #000 50%, #000 100%);
+  background-size: 30px 30px; */
+  background-color: var(--brigth);
+  /* background-blend-mode: difference; */
+  overflow: hidden;
+}
+.about {
+  display: flex;
+  flex-direction: column;
+}
+
+.bgTitle {
+  position: absolute;
+  top: -5%;
+  left: 10%;
+  font-size: 15rem;
+  color: var(--remark);
+  opacity: 0.1;
+  text-orientation: sideways-right;
+}
+.about h1 {
+  font-size: 3rem;
+  margin: 4rem 1rem;
+  color: var(--remark);
+}
+
+.about p {
+  font-size: 3rem;
+  margin: 2rem 1rem;
+  margin-top: 1rem;
+  z-index: 1;
+}
