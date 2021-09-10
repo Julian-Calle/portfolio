@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
+import codeIcon from "../assets/code.svg";
 
 export const generalContext = React.createContext();
 const GeneralContextProvider = generalContext.Provider;
@@ -160,6 +161,36 @@ export function GeneralProvider({ children }) {
     setInterval(changeCursor, 1000);
   };
 
+  const listOfProjects = [
+    {
+      title: "test1",
+      tecnologies: [codeIcon, codeIcon, codeIcon],
+      picture: codeIcon,
+      url: "https://www.geeksforgeeks.org/how-to-reverse-an-animation-on-mouse-out-after-hover/",
+      repository: "https://source.unsplash.com/random/800x800",
+      api: "https://source.unsplash.com/random/800x800",
+    },
+    {
+      title: "test2",
+      tecnologies: [codeIcon, codeIcon, codeIcon],
+      url: "https://www.geeksforgeeks.org/how-to-reverse-an-animation-on-mouse-out-after-hover/",
+      picture: "https://source.unsplash.com/random/800x800",
+    },
+    {
+      title: "test2",
+      tecnologies: [codeIcon, codeIcon, codeIcon],
+      url: "https://www.geeksforgeeks.org/how-to-reverse-an-animation-on-mouse-out-after-hover/",
+      picture: "https://source.unsplash.com/random/800x800",
+    },
+    {
+      title: "test2",
+      tecnologies: [codeIcon, codeIcon, codeIcon],
+      url: "https://www.geeksforgeeks.org/how-to-reverse-an-animation-on-mouse-out-after-hover/",
+      picture: "https://source.unsplash.com/random/800x800",
+      api: "https://source.unsplash.com/random/800x800",
+    },
+  ];
+
   return (
     <GeneralContextProvider
       value={{
@@ -184,17 +215,8 @@ export function GeneralProvider({ children }) {
         showIcons,
         cursorBlinker,
         cursorBlink,
+        listOfProjects,
       }}
-      //   menuParameters={menuParameters}
-      //   settersMenuArray={settersMenuArray}
-      //   stateMenuArray={stateMenuArray}
-      //   otherMenuParams={otherMenuParams}
-      //   otherMenuSettersArr={otherMenuSettersArr}
-      //   iconsParameters={iconsParameters}
-      //   stateIconsArray={stateIconsArray}
-      //   settersIconsArray={settersIconsArray}
-      //   rollBarrel={rollBarrel}
-      //   ChangeSettingsCls={ChangeSettingsCls}
     >
       {children}
     </GeneralContextProvider>

@@ -1,0 +1,124 @@
+.projects h1 {
+  font-size: 3rem;
+  margin: 4rem 1rem;
+  color: var(--remark);
+}
+
+.posterContainer {
+  position: relative;
+  width: 16rem;
+}
+.poster {
+  border-radius: 20px;
+  width: 16rem;
+  height: 16rem;
+  position: relative;
+}
+
+.posterInfo {
+  width: 16rem;
+  height: 16rem;
+  background-color: black;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-bottom: 1rem;
+  padding-top: 2rem;
+  gap: 2rem;
+  top: 0;
+  position: absolute;
+}
+.tecIcon {
+  width: 2rem;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+}
+
+.projectTecnologies {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.showPicture {
+  display: initial;
+  animation-name: appear;
+  animation-delay: 0s;
+  animation-duration: 1s;
+}
+
+.showDetails {
+  display: flex;
+  animation-name: appear;
+  animation-delay: 0s;
+  animation-duration: 1s;
+}
+.hidePicture,
+.hideDetails {
+  animation-name: disappear;
+  animation-delay: 0s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.none {
+  display: none;
+}
+
+.buttonContainer {
+  position: absolute;
+  bottom: 1rem;
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+  justify-content: center;
+}
+
+.btn_projectIcons {
+  font-size: 2rem;
+}
+button.btn_projectIcons {
+  height: 3.5rem;
+  width: 3.5rem;
+  text-align: center;
+  border: 0 solid transparent;
+  border-radius: 50%;
+}
+.IconButton {
+  border-radius: 50%;
+}
+
+@keyframes appear {
+  0% {
+    transform: translateY(0px) scale(1, 0);
+    transform-origin: 50% top;
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(0px) scale(1, 1);
+    transform-origin: 50% top;
+    opacity: 1;
+  }
+}
+
+@keyframes disappear {
+  0% {
+    transform: translateY(0px) scale(1, 1);
+    opacity: 0.5;
+    transform-origin: 50% top;
+  }
+  100% {
+    transform: translateY(16rem) scale(1, 0);
+    opacity: 0;
+    transform-origin: 50% top;
+  }
+}
