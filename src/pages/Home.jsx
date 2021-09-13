@@ -23,7 +23,7 @@ export default function Home() {
           <TypeWriterEffect text={title} />
           <span className="titleCursor">{cursorBlink}</span>
         </h1>
-        <p className="infoText">
+        <p className="infoTextHome">
           En caso de que seas un reclutador sin un background de programador es
           posible que pienses que esta web es algo <span>"críptica" </span>y
           extraña pero interesante o poco estilizada pero dinámica. Lo que estas

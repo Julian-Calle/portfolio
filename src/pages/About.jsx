@@ -81,7 +81,7 @@ export default function About() {
           <span className="typeCursor">{cursorBlink}</span>
         </div>
 
-        <p className="infoText">
+        <p className="infoTextAbout">
           Mi historia en pocas palabras es simple. Todo empezó con la
           ingeniería, <span>ingeniería de energías</span>. Una que me encanta.
           Continuó con el mundo de la{" "}
