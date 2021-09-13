@@ -1,0 +1,133 @@
+.contactContainer {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-around;
+  padding-bottom: 5rem;
+}
+
+.inputField {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  margin: 0 1rem;
+}
+
+.contactContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.InputsArea {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 1rem;
+}
+.firstLine {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.inputBox {
+  background-color: var(--dark);
+  border: 1px solid var(--darker);
+  width: 100%;
+  color: white;
+}
+
+.mediaSection,
+.emailSection {
+  margin-top: 2rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 0 3rem;
+}
+
+.contactBtn {
+  padding: 0.5rem;
+  background-color: var(--remark);
+  border: 2px solid var(--remark);
+  border-radius: 5px;
+}
+
+.contactBtn:hover {
+  box-shadow: 0 0 10px 1px var(--remark);
+}
+
+.contactContainer h1 {
+  font-size: 2rem;
+  margin: 4rem 1rem;
+  margin-bottom: 2rem;
+  color: var(--remark);
+  display: inline;
+}
+
+.cssFakeText p:first-child,
+.cssFakeText p:last-child {
+  color: yellow;
+}
+
+.cssFakeText {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.contactLink {
+  text-decoration: none;
+  color: rgb(0, 89, 255);
+}
+
+.contactLink:hover {
+  color: var(--remark);
+  text-decoration: underline;
+}
+
+@media (min-width: 450px) {
+  .contactContainer p,
+  label {
+    font-size: 1.2rem;
+  }
+
+  .inputBox {
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 550px) {
+  .contactContainer p,
+  label {
+    font-size: 1.5rem;
+  }
+  .contactContainer h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 700px) {
+  .contactContainer p,
+  label {
+    font-size: 2rem;
+  }
+
+  .inputBox {
+    font-size: 1.5rem;
+  }
+  .contactContainer h1 {
+    font-size: 3rem;
+  }
+}
+@media (min-width: 1590px) {
+  .emailSection {
+    border-left: 7px solid var(--remark);
+  }
+}

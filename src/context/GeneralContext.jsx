@@ -1,6 +1,16 @@
 import React, { useState } from "react";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
-import codeIcon from "../assets/code.svg";
+import reactIcon from "../assets/react.png";
+import htmlIcon from "../assets/html5.png";
+import cssIcon from "../assets/css3.png";
+import nodeIcon from "../assets/nodejs.svg";
+import apiIcon from "../assets/api.svg";
+import jsIcon from "../assets/js.png";
+import movieApp from "../assets/movieApp.png";
+import clockApp from "../assets/clockApp.png";
+import trackerApp from "../assets/trackerApp.png";
+import trackerApi from "../assets/trackerApi.png";
+import portfolioApp from "../assets/portfolioApp.png";
 
 export const generalContext = React.createContext();
 const GeneralContextProvider = generalContext.Provider;
@@ -163,31 +173,42 @@ export function GeneralProvider({ children }) {
 
   const listOfProjects = [
     {
-      title: "test1",
-      tecnologies: [codeIcon, codeIcon, codeIcon],
-      picture: codeIcon,
-      url: "https://www.geeksforgeeks.org/how-to-reverse-an-animation-on-mouse-out-after-hover/",
-      repository: "https://source.unsplash.com/random/800x800",
-      api: "https://source.unsplash.com/random/800x800",
+      title: "Price Tracker",
+      tecnologies: [reactIcon, cssIcon, htmlIcon, jsIcon, nodeIcon, apiIcon],
+      picture: trackerApp,
+      url: "https://juuglepricetracker.vercel.app/",
+      repository: "https://github.com/Julian-Calle/price_tracker",
+      api: "https://jptracker.herokuapp.com/api-docs/",
     },
     {
-      title: "test2",
-      tecnologies: [codeIcon, codeIcon, codeIcon],
-      url: "https://www.geeksforgeeks.org/how-to-reverse-an-animation-on-mouse-out-after-hover/",
-      picture: "https://source.unsplash.com/random/800x800",
+      title: "Price Tracker API",
+      tecnologies: [nodeIcon],
+      picture: trackerApi,
+      url: "https://jptracker.herokuapp.com/api-docs/",
+      repository: "https://github.com/Julian-Calle/price_tracker",
+      api: "https://jptracker.herokuapp.com/api-docs/",
     },
     {
-      title: "test2",
-      tecnologies: [codeIcon, codeIcon, codeIcon],
-      url: "https://www.geeksforgeeks.org/how-to-reverse-an-animation-on-mouse-out-after-hover/",
-      picture: "https://source.unsplash.com/random/800x800",
+      title: "Movie browser",
+      tecnologies: [reactIcon, cssIcon, htmlIcon, jsIcon, apiIcon],
+      picture: movieApp,
+      url: "https://movie-browser-juugle.vercel.app/",
+      repository: "https://github.com/Julian-Calle/movieBrowser",
     },
     {
-      title: "test2",
-      tecnologies: [codeIcon, codeIcon, codeIcon],
-      url: "https://www.geeksforgeeks.org/how-to-reverse-an-animation-on-mouse-out-after-hover/",
-      picture: "https://source.unsplash.com/random/800x800",
-      api: "https://source.unsplash.com/random/800x800",
+      title: "Digital Clock",
+      tecnologies: [cssIcon, htmlIcon, jsIcon],
+      picture: clockApp,
+      repository: "https://github.com/Julian-Calle/vanillaAlarmClock",
+      url: "https://juugleclock.vercel.app/",
+    },
+
+    {
+      title: "My portfolio",
+      tecnologies: [reactIcon, cssIcon, htmlIcon, jsIcon],
+      picture: portfolioApp,
+      repository: "https://github.com/Julian-Calle/portfolio",
+      url: "https://juugleclock.vercel.app/",
     },
   ];
 

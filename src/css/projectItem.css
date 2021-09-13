@@ -65,7 +65,7 @@
 .hidePicture,
 .hideDetails {
   animation-name: disappear;
-  animation-delay: 0s;
+  animation-delay: 0.5s;
   animation-duration: 1s;
   animation-fill-mode: forwards;
 }
@@ -84,15 +84,23 @@
 }
 
 .btn_projectIcons {
-  font-size: 2rem;
+  font-size: 2.2rem;
 }
 button.btn_projectIcons {
-  height: 3.5rem;
-  width: 3.5rem;
+  height: 4rem;
+  width: 4rem;
   text-align: center;
-  border: 0 solid transparent;
+  border: 2px solid var(--remark);
   border-radius: 50%;
 }
+
+.btn_projectIcons {
+  animation-name: blink;
+  animation-delay: 0;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
 .IconButton {
   border-radius: 50%;
 }
@@ -120,5 +128,21 @@ button.btn_projectIcons {
     transform: translateY(16rem) scale(1, 0);
     opacity: 0;
     transform-origin: 50% top;
+  }
+}
+
+@keyframes blink {
+  0% {
+    transform: rotate(0) scale(0.95, 0.95);
+    box-shadow: 0 0 0 0px var(--remark);
+  }
+  50% {
+    transform: rotate(45deg) scale(1, 1);
+    box-shadow: 0 0 10px 3px var(--remark);
+  }
+
+  100% {
+    transform: rotate(0) scale(0.95, 0.95);
+    box-shadow: 0 0 0 0px var(--remark);
   }
 }

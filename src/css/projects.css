@@ -6,8 +6,10 @@
   overflow: hidden;
 }
 .projects {
+  position: relative;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .bgTitle {
@@ -25,5 +27,6 @@
   justify-content: center;
   flex-wrap: wrap;
   gap: 3rem;
-  padding: 2rem;
+  max-width: 100%;
+  padding: 0 2rem;
 }

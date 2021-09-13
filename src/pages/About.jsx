@@ -1,12 +1,13 @@
 import "../css/about.css";
 import Typewriter from "typewriter-effect";
-import React, { useState, useEffect } from "react";
-import { typeText, typeTextAction } from "../utils/helpers";
+import React, { useEffect } from "react";
+// import { typeText } from "../utils/helpers";
 import useGeneralContext from "../hooks/useGeneralContext";
+import TypeWriterEffect from "../components/TypeWriterEffect";
 export default function About() {
   const { cursorBlinker, cursorBlink } = useGeneralContext();
-  const [titleText, setTitleText] = useState("");
-  const [counterValue, setCounterValue] = useState(0);
+  // const [titleText, setTitleText] = useState("");
+  // const [counterValue, setCounterValue] = useState(0);
 
   const typeToText = [
     "I am ",
@@ -21,7 +22,7 @@ export default function About() {
   const title = "ABOUT ME";
 
   useEffect(() => {
-    typeText(title, setTitleText, counterValue, setCounterValue);
+    // typeText(title, setTitleText, counterValue, setCounterValue);
     cursorBlinker();
   }, []);
 
@@ -29,11 +30,9 @@ export default function About() {
     <div className="aboutContainer">
       <div className="about">
         <h1>
-          {titleText}
+          <TypeWriterEffect text={title} />
           <span className="titleCursor">{cursorBlink}</span>
         </h1>
-        {/* <h1>{multiText}</h1> */}
-        {/* <h1>{counterMultiValue}</h1> */}
         <div className="typeContainer">
           <Typewriter
             options={{
@@ -93,7 +92,9 @@ export default function About() {
           enim quas!
         </p>
       </div>
-      <div className="bgTitle">{titleText}</div>
+      <div className="bgTitle">
+        <TypeWriterEffect text={title} />
+      </div>
     </div>
   );
 }

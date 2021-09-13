@@ -1,16 +1,17 @@
 import "../css/home.css";
 
-import React, { useState, useEffect } from "react";
-import { typeText } from "../utils/helpers";
+import React, { useEffect } from "react";
+// import { typeText } from "../utils/helpers";
+import TypeWriterEffect from "../components/TypeWriterEffect";
 import useGeneralContext from "../hooks/useGeneralContext";
 export default function Home() {
   const { cursorBlinker, cursorBlink } = useGeneralContext();
-  const [titleText, setTitleText] = useState("");
-  const [counterValue, setCounterValue] = useState(0);
+  // const [titleText, setTitleText] = useState("");
+  // const [counterValue, setCounterValue] = useState(0);
   const title = "WELCOME";
 
   useEffect(() => {
-    typeText(title, setTitleText, counterValue, setCounterValue);
+    // typeText(title, setTitleText, counterValue, setCounterValue);
 
     cursorBlinker();
   }, []);
@@ -19,7 +20,7 @@ export default function Home() {
     <div className="homeContainer">
       <div className="home">
         <h1>
-          {titleText}
+          <TypeWriterEffect text={title} />
           <span className="titleCursor">{cursorBlink}</span>
         </h1>
         <p>
@@ -30,7 +31,9 @@ export default function Home() {
           enim quas!
         </p>
       </div>
-      <div className="bgTitle">{titleText}</div>
+      <div className="bgTitle">
+        <TypeWriterEffect text={title} />
+      </div>
     </div>
   );
 }

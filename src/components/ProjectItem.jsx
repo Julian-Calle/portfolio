@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { v4 as uuidv4 } from "uuid";
 import { Link } from "react-router-dom";
 import "../css/projectItem.css";
 import ButtonIcon from "../components/BottonIcon";
@@ -30,6 +31,7 @@ export default function ProjectItem({ projectInfo }) {
           {projectInfo.tecnologies.map((tecnology) => {
             return (
               <img
+                key={uuidv4()}
                 className="tecIcon"
                 src={tecnology}
                 alt={projectInfo.title}
@@ -37,23 +39,20 @@ export default function ProjectItem({ projectInfo }) {
             );
           })}
         </div>
+
         <div className="buttonContainer">
-          <button className="IconButton">
-            <Link to={{ pathname: projectInfo.repository }} target="_blank">
-              <ButtonIcon icon="github" cls="projectIcons" />
-            </Link>
-          </button>
-          <button className="IconButton">
-            <Link to={{ pathname: projectInfo.url }} target="_blank">
-              <ButtonIcon icon="rocket" cls="projectIcons" />
-            </Link>
-          </button>
+          <Link to={{ pathname: projectInfo.repository }} target="_blank">
+            <ButtonIcon icon="github" cls="projectIcons" />
+          </Link>
+
+          <Link to={{ pathname: projectInfo.url }} target="_blank">
+            <ButtonIcon icon="rocket" cls="projectIcons" />
+          </Link>
+
           {projectInfo.api && (
-            <button className="IconButton">
-              <Link to={{ pathname: projectInfo.api }} target="_blank">
-                <ButtonIcon icon="database" cls="projectIcons" />
-              </Link>
-            </button>
+            <Link to={{ pathname: projectInfo.api }} target="_blank">
+              <ButtonIcon icon="database" cls="projectIcons" />
+            </Link>
           )}
         </div>
       </div>
