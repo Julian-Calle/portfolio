@@ -2,22 +2,14 @@
   position: relative;
   width: 100%;
   height: 100%;
-  /* background: repeating-linear-gradient(
-      0deg,
-      #fff 0%,
-      #fff 50%,
-      #000 50%,
-      #000 100%
-    ),
-    repeating-linear-gradient(90deg, #fff 0%, #fff 50%, #000 50%, #000 100%);
-  background-size: 30px 30px; */
   background-color: var(--brigth);
-  /* background-blend-mode: difference; */
   overflow: hidden;
 }
 .home {
   display: flex;
   flex-direction: column;
+  position: relative;
+  overflow: hidden;
 }
 
 .bgTitle {
@@ -35,16 +27,29 @@
   color: var(--remark);
 }
 
-.home p {
-  font-size: 3rem;
-  margin: 2rem 1rem;
-  margin-top: 1rem;
-  z-index: 1;
-}
-
 .show {
   display: initial;
 }
 .hide {
   display: none;
+}
+.infoText {
+  font-size: 1rem;
+  margin: 2rem 1rem;
+  margin-top: 1rem;
+  z-index: 1;
+}
+.infoText span {
+  color: var(--highlight);
+}
+@media (min-width: 500px) {
+  .infoText {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .infoText {
+    font-size: 2.5rem;
+  }
 }

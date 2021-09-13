@@ -13,6 +13,7 @@ html {
   --darker: #161a1d;
   --brigther: #2b2e32;
   --remark: #857ee2;
+  --highlight: rgb(204, 0, 126);
 }
 
 .App {

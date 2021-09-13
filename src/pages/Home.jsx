@@ -1,5 +1,5 @@
 import "../css/home.css";
-
+import { Link } from "react-router-dom";
 import React, { useEffect } from "react";
 // import { typeText } from "../utils/helpers";
 import TypeWriterEffect from "../components/TypeWriterEffect";
@@ -23,12 +23,25 @@ export default function Home() {
           <TypeWriterEffect text={title} />
           <span className="titleCursor">{cursorBlink}</span>
         </h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae
-          placeat, animi explicabo, ex ipsa ad consequuntur repellat, amet
-          aliquam vel fuga commodi sunt odit laboriosam voluptas ducimus sit
-          asperiores? Sed similique libero quisquam, dolores ut cumque ullam eos
-          enim quas!
+        <p className="infoText">
+          En caso de que seas un reclutador sin un background de programador es
+          posible que pienses que esta web es algo <span>"críptica" </span>y
+          extraña pero interesante o poco estilizada pero dinámica. Lo que estas
+          viendo es el 1% de lo que veo cada día{" "}
+          <span>"un editor de código"</span>. 1% porque un editor de verdad
+          puede ofrecer mucho más. Esta es la cuna de la que surgen grandes
+          aplicaciones. La mejor forma de empezar es mostrándote el origen de
+          todo. Esto incluye por supuesto un vistazó al 1% mi trabajo y my valia
+          como desarrollador.{" "}
+          <span>1% porque en verdad puedo ofrecer mucho más. </span>
+          <Link
+            className="contactLink"
+            to={{
+              pathname: "contacts",
+            }}
+          >
+            Sólo tienes que contactar conmigo.
+          </Link>
         </p>
       </div>
       <div className="bgTitle">

@@ -45,11 +45,7 @@ export default function Contact() {
           <p>{`.social ${bracketOpen}`}</p>
           <p>
             website:{" "}
-            <Link
-              className="contactLink"
-              to={{ pathname: "https://source.unsplash.com/random/800x800" }}
-              target="_blank"
-            >
+            <Link className="contactLink" to={{ pathname: "/" }}>
               Julian-Calle-Portfolio
             </Link>
             {" ;"}

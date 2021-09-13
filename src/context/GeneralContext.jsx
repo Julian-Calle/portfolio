@@ -208,7 +208,7 @@ export function GeneralProvider({ children }) {
       tecnologies: [reactIcon, cssIcon, htmlIcon, jsIcon],
       picture: portfolioApp,
       repository: "https://github.com/Julian-Calle/portfolio",
-      url: "https://juugleclock.vercel.app/",
+      url: "https://portfolio-julian-calle.vercel.app/",
     },
   ];
 
