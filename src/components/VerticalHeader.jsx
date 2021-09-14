@@ -61,7 +61,7 @@ export default function VerticalHeader() {
       },
     },
     {
-      name: "About.hmtl",
+      name: "About.html",
       icon: htmlLogo,
       route: "/about",
       activeActions: true,

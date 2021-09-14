@@ -33,7 +33,7 @@ export default function IconsHeader() {
       },
     },
     {
-      name: "About.hmtl",
+      name: "About.html",
       icon: userIcon,
       route: "/about",
       activeActions: true,

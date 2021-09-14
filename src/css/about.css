@@ -6,8 +6,16 @@
   overflow: hidden;
 }
 .about {
-  display: flex;
-  flex-direction: column;
+  /* display: flex;
+  flex-direction: column; */
+  width: 100%;
+  display: grid;
+  gap: 3rem;
+  grid-template-rows: 5rem 4rem 1fr;
+  grid-template-areas:
+    "title"
+    "type"
+    "text";
 }
 
 .bgTitle {
@@ -23,6 +31,7 @@
   font-size: 3rem;
   margin: 4rem 1rem;
   color: var(--remark);
+  grid-area: title;
 }
 
 .infoTextAbout {
@@ -31,10 +40,13 @@
   margin-top: 1rem;
   z-index: 1;
 }
-
+.textContainer {
+  grid-area: text;
+}
 .typeContainer {
   display: flex;
   justify-content: center;
+  grid-area: type;
 }
 
 .Typewriter__wrapper {
@@ -54,12 +66,12 @@ span.typeCursor {
 }
 @media (min-width: 500px) {
   .infoTextAbout {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 }
 
-@media (min-width: 1024px) {
-  .infoTexinfoTextAbouttHome {
+/* @media (min-width: 1000px) {
+  .infoTextAbout {
     font-size: 2.5rem;
   }
-}
+} */

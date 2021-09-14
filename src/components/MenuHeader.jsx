@@ -60,7 +60,7 @@ export default function MenuHeader() {
       },
     },
     {
-      name: "About.hmtl",
+      name: "About.html",
       icon: htmlLogo,
       route: "/about",
       activeActions: true,

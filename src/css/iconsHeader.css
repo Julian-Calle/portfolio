@@ -4,9 +4,8 @@
 
 .iconsMenu {
   display: grid;
-  /* flex-direction: column; */
   background-color: var(--dark);
-  font-size: 1.5rem;
+  /* font-size: 1.5rem; */
   width: 100%;
   gap: 2rem;
   height: 100%;
@@ -30,14 +29,14 @@
 }
 
 .iconsSegment img:hover {
-  width: 4rem;
+  width: 3rem;
   transition: all 0.5s 0s;
   border-left: 3px white solid;
   padding-left: 0.3rem;
 }
 
 .iconsSegment img {
-  width: 3.5rem;
+  width: 2.5rem;
 }
 
 .iconsOption {
@@ -54,7 +53,7 @@
 }
 
 .iconsOptionSelected img {
-  width: 4rem;
+  width: 3rem;
   border-left: 3px white solid;
   border-radius: 28%;
   padding-left: 0.3rem;

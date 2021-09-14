@@ -13,7 +13,7 @@ export default function About() {
     "a Robot Programmer",
     `<strong>IRON MAN!</strong>`,
     `<strong>Upss.. Lapsus</strong>`,
-    "a Full stack developer",
+    "a Full stack dev!!",
     `<strong className= "test">JULIÁN CALLE</strong>`,
   ];
 
@@ -80,36 +80,41 @@ export default function About() {
           />
           <span className="typeCursor">{cursorBlink}</span>
         </div>
+        <div className="textContainer">
+          <p className="infoTextAbout">
+            Mi historia en pocas palabras es simple. Todo empezó con la
+            ingeniería, ingeniería de energías. <span>Una que me encanta</span>.
+            Continuó con el mundo de la programación de robots industriales.{" "}
+            <span>Algo que me inquieta</span>. Pero despues de la pandemia el
+            mundo cambio, y supe que yo también debía de cambiar. Ahora soy un
+            desarrolador full stack.
+            <span>Esto es algo que me apasiona.</span>
+          </p>
 
-        <p className="infoTextAbout">
-          Mi historia en pocas palabras es simple. Todo empezó con la
-          ingeniería, <span>ingeniería de energías</span>. Una que me encanta.
-          Continuó con el mundo de la{" "}
-          <span>programación de robot industriales</span>. Algo que me inquieta.
-          Pero despues de la pandemia el mundo cambio, y supe que yo también
-          debía de cambiar. Ahora soy un <span>desarrolador full stack</span>.
-          Esto es algo que me apasiona.En mi{" "}
-          <Link
-            className="contactLink"
-            to={{
-              pathname: "https://www.linkedin.com/in/julian-calle/",
-            }}
-            target="_blank"
-          >
-            linkedin
-          </Link>{" "}
-          podras ver que mi perfil es algo ecléctico, pero también que es el
-          perfil de una persona dada a aprender y a no conformarse. Podrás
-          encontrar información más detallada de mí en{" "}
-          <Link
-            className="contactLink"
-            to={{
-              pathname: "contacts",
-            }}
-          >
-            mis respectivas redes.
-          </Link>
-        </p>
+          <p className="infoTextAbout">
+            En mi{" "}
+            <Link
+              className="contactLink"
+              to={{
+                pathname: "https://www.linkedin.com/in/julian-calle/",
+              }}
+              target="_blank"
+            >
+              linkedin
+            </Link>{" "}
+            podras ver que mi perfil es algo ecléctico, pero también que es el
+            perfil de una persona dada a aprender y a no conformarse. Podrás
+            encontrar información más detallada de mí en{" "}
+            <Link
+              className="contactLink"
+              to={{
+                pathname: "contact",
+              }}
+            >
+              mis respectivas redes.
+            </Link>
+          </p>
+        </div>
       </div>
       <div className="bgTitle">
         <TypeWriterEffect text={title} />

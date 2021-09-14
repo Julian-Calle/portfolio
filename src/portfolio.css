@@ -59,14 +59,14 @@ html {
 }
 
 .icons > img:hover {
-  width: 4rem;
+  width: 3rem;
   transition: all 0.5s 0s;
   border-left: 3px white solid;
 
   padding-left: 0.3rem;
 }
 .settingSelected {
-  width: 4rem;
+  width: 3rem;
   transition: all 0.5s 0s;
   border-left: 3px white solid;
   border-radius: 28%;
@@ -74,7 +74,7 @@ html {
 }
 
 .settingNotSelected {
-  width: 3.5rem;
+  width: 2.5rem;
   transition: all 0.5s 0s;
 }
 
@@ -151,7 +151,7 @@ html {
     display: grid;
     background-color: black;
     margin: auto;
-    grid-template-columns: 5rem 5fr;
+    grid-template-columns: 4rem 5fr;
     grid-template-rows: 2rem 2.5rem 1fr 4rem;
     grid-template-areas:
       "fakeHeader  fakeHeader"
@@ -177,8 +177,8 @@ html {
     padding: 1rem 1rem;
   }
   .App {
-    grid-template-columns: 5rem 12rem 10fr;
-    grid-template-rows: 2rem 3rem 1fr 2rem;
+    grid-template-columns: 4rem 10rem 10fr;
+    grid-template-rows: 2rem 2.5rem 1fr 2rem;
     grid-template-areas:
       "fakeHeader fakeHeader fakeHeader   "
       "icons verticalMenu menu    "

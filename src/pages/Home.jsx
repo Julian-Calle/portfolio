@@ -24,23 +24,26 @@ export default function Home() {
           <span className="titleCursor">{cursorBlink}</span>
         </h1>
         <p className="infoTextHome">
-          En caso de que seas un reclutador sin un background de programador es
-          posible que pienses que esta web es algo <span>"críptica" </span>y
-          extraña pero interesante o poco estilizada pero dinámica. Lo que estas
-          viendo es el 1% de lo que veo cada día{" "}
-          <span>"un editor de código"</span>. 1% porque un editor de verdad
-          puede ofrecer mucho más. Esta es la cuna de la que surgen grandes
-          aplicaciones. La mejor forma de empezar es mostrándote el origen de
-          todo. Esto incluye por supuesto un vistazó al 1% mi trabajo y my valia
-          como desarrollador.{" "}
-          <span>1% porque en verdad puedo ofrecer mucho más. </span>
+          En caso de que seas un reclutador sin un background de programador, es
+          posible que pienses que esta web es algo críptica y extraña pero
+          interesante o poco estilizada pero dinámica. Lo que estas viendo es el
+          1% de lo que veo cada día. <span>"Un editor de código"</span>. 1%
+          porque un editor de verdad puede ofrecer mucho más.
+        </p>
+
+        <p className="infoTextHome">
+          Esta es la cuna de la que surgen grandes aplicaciones. La mejor forma
+          de empezar es mostrándote el origen de todo. Esto incluye por supuesto
+          un vistazo al 1% mi trabajo y mi valia como desarrollador.{" "}
+          <span>1% porque en verdad puedo ofrecer mucho más. </span> Si quieres
+          mas información sólo{" "}
           <Link
             className="contactLink"
             to={{
-              pathname: "contacts",
+              pathname: "contact",
             }}
           >
-            Sólo tienes que contactar conmigo.
+            contacta conmigo.
           </Link>
         </p>
       </div>
