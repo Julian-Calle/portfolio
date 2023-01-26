@@ -86,6 +86,7 @@ html {
   grid-area: main;
   background-color: var(--brigth);
   border-left: 2px solid var(--darker);
+  overflow: scroll;
 }
 
 .footer {
