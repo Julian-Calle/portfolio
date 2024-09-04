@@ -178,15 +178,15 @@ export function GeneralProvider({ children }) {
       picture: trackerApp,
       url: "https://juuglepricetracker.vercel.app/",
       repository: "https://github.com/Julian-Calle/price_tracker",
-      api: "https://jptracker.herokuapp.com/api-docs/",
+      api: "https://pricetracker-production-dc4d.up.railway.app/docs/",
     },
     {
       title: "Price Tracker API",
       tecnologies: [nodeIcon],
       picture: trackerApi,
-      url: "https://jptracker.herokuapp.com/api-docs/",
+      url: "https://pricetracker-production-dc4d.up.railway.app/docs/",
       repository: "https://github.com/Julian-Calle/price_tracker",
-      api: "https://jptracker.herokuapp.com/api-docs/",
+      api: "https://pricetracker-production-dc4d.up.railway.app/docs/",
     },
     {
       title: "Movie browser",
